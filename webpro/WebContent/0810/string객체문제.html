@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+function proc1(){
+	
+	//주민번호 입력받기
+	regno = prompt("주민번호를 입력하세요");
+	
+	//앞에서 2자리씩 출력
+	c1 = regno.substr(0,2);
+	c2 = regno.substr(2,2);
+	c3 = regno.substr(4,2);
+	
+	//7번째 한자리 추출
+	gend = regno.substr(7,1);
+	
+	res = "주민번호 : " + regno + "<br>";
+	res += "생일 : ";
+	
+	if(gend == 3 || gend == 4){
+		year = "20" + c1;
+	} 
+	if(gend == 1 || gend == 2){
+		year = "19" + c1;
+	}
+	res += year + "년 " + c2 + "월 " + c3 + "일 <br>";
+	
+	//gend값 비교 성별 구하기
+	if(gend == 1 || gend ==3){
+		gender = "남자";
+	}
+	if(gend ==2 || gend ==4){
+		gender = "여자";
+	}
+	res += "성별 : " + gender + "<br>";
+	
+	//나이구하기 현재 년도 - 생년월일 + 1
+	now = new Date();
+	nowyear = now.getFullYear();
+	age = nowyear - parseInt(year) + 1;
+	res += "나이 : " + age + "살";
+	
+	document.querySelector("#result1").innerHTML = res;
+}
+
+function proc2(){
+	
+	regno = prompt("주민번호를 입력하세요");
+	
+	A = regno.charAt(0);
+	B = regno.charAt(1);
+	C = regno.charAt(2);
+	D = regno.charAt(3);
+	E = regno.charAt(4);
+	F = regno.charAt(5);
+	G = regno.charAt(7);
+	H = regno.charAt(8);
+	I = regno.charAt(9);
+	J = regno.charAt(10);
+	K = regno.charAt(11);
+	L = regno.charAt(12);
+	M = regno.charAt(13);
+	
+	sum = A*2 + B*3 + C*4 + D*5 + E*6 + F*7 + G*8 + H*9 + I*2 + J*3 + K*4 + L*5;
+	
+	remainder = sum % 11;
+	
+	check = 11-remainder;
+	
+	res = "주민번호 : " + regno + "<br>";
+	res += "1번 계산 결과 : " + sum +"<br>";
+	res += "11로 나눈 결과 : " + remainder + "<br>";
+	res += "11에서 뺀 결과 : " + check + "<br>";
+	
+	if(check >=0 && check <=9){
+		check;
+	} else if(check == 10){
+		check = 0;
+	} else if(check == 11){
+		check = 1;
+	}
+	
+	if(check == M){
+		res += "마지막 자리와 비교한 결과 맞는 번호입니다.";
+	} else {
+		res += "마지막 자리와 비교한 결과 맞는 번호가 아닙니다.";
+	}
+	
+	document.querySelector("#result2").innerHTML = res;
+}
+
+</script>
+</head>
+<body>
+<div class="box">
+<h3>1. 주민등록번호를 입력 받아 생년월일과 성별을 출력하는 프로그램을 작성하시오</h3>
+예) 주민등록번호를 110326-4432618로 입력 받은 경우<br>
+생일 : 2011년 3월 26일 <br>
+성별 : 여자  나이 : <br><br>
+<input type="button" value="확인" onclick="proc1()">
+<br><br>
+<div id="result1"></div>
+</div> 
+
+<div class="box">
+<h3>2. 유효성 검사 프로그램 작성</h3>
+1. A*2 + B*3 + ... + H*9 + I*2 + ... + L*5 의 총합을 구한다. <br>
+2. 1번의 합을 11로 나눈 나머지를 구한다. <br>
+3. 11에서 2번의 결과를 뺀다. <br>
+4. 3번의 결과가 0~9이면 값 그대로, 10이면 0, 11이면 1로 변환 <br>
+5. 4번의 결과와 M자리의 값이 같으면 맞는 번호이다. 
+<br><br>
+<input type="button" value="확인" onclick="proc2()">
+<br><br>
+<div id="result2"></div>
+</div> 
+</body>
+</html>

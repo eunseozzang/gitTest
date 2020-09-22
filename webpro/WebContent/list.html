@@ -1,0 +1,198 @@
+<!doctype heml>
+<html>
+   <!-- 외부스타일 적용-->
+   <link rel="stylesheet" href="css/public.css">
+   
+   <!-- 외부에있는것보다 내부에 있는것을 실행-->
+
+   <style>
+      
+   body div{
+      border : 1px solid orange;
+      width : 250px;
+      height : 200px;
+      margin : 10px;
+      display : inline-block; /*옆으로 보고 싶을때 */
+      overflow : hidden scroll;
+         /* overflow : scroll*/
+   }
+   img{
+      width : 50px;
+      height : 30px;
+   }
+   #d1{
+      border : 1px solid red;
+      
+   }
+   </style>
+   
+   <body>
+   <pre>
+      작성팁
+     테두리 설정 :  두께(px) 
+             스타일(solid, double, inset, outset) 
+             색상 
+         border : 1px solid orange;
+     넘치는 항목 처리:
+         overflow : auto;
+         overflow : hidden;
+         overflow : scroll;
+         
+     외부스타일 작성 및 적용 
+      작성 : *.css로 저장 
+      적용 : &lt;link rel=""stylesheet"" href=css/public.css&gt;
+   </pre>
+   <div id="d1"> <!--하나만 특별하기 할때는 div 뒤에 조건식 -->
+      
+      <h3> 번호 없는 리스트</h3>
+      텍스트
+      <ul>
+         <li>아메리카노</li>
+         <li>카푸치노</li>
+         <li>카페라떼</li>
+         <li>에스프레소</li>
+      </ul>
+   </div>
+      
+   <div>
+      <h3> 번호 없는 리스트</h3>
+      이미지
+      <ul>
+         <li><img src = "images/아메리카노.jpg" alt=""></li>
+         <li><img src = "images/카페라떼.jpg" alt=""></li>
+         <li><img src = "images/카푸치노.jpg" alt=""></li>
+         <li><img src = "images/에스프레소.jpg" alt=""></li>
+      </ul>
+      
+   </div>
+      
+   <div>
+      <h3> 번호 없는 리스트</h3>
+      <ul>
+         <li><a href="커피.html" target="_black">아메리카노</a></li>
+         <li><a href="커피.html" target="_black">카푸치노</a></li>
+         <li><a href="커피.html" target="_black">카페라떼</a></li>
+         <li><a href="커피.html" >에스프레소</a></li>
+      </ul>
+      </div>
+      
+   <div>
+      <h3> 번호 없는 리스트</h3>
+      a링크 이미지
+      <ul>
+         <li><a href="아메리카노.html"><img src = "images/아메리카노.jpg" alt=""></a></li>
+         <li><a href="카페라떼.html"><img src = "images/카페라떼.jpg" alt=""></a></li>
+         <li><a href="카푸치노.html"><img src = "images/카푸치노.jpg" alt=""></a></li>
+         <li><a href="에스프레소.html"><img src = "images/에스프레소.jpg" alt=""></a></li>
+      </ul>
+   </div>
+      
+   <div>
+      <h3> 번호 없는 리스트</h3>
+      다른 리스트
+      <ul>
+         <li> Ul 속에 Ul
+            <ul>
+               <li>abc</li>
+                  <ol>
+                     <li>abc1</li>
+                     <li>abc2</li>
+                  </ol>
+               <li>def</li>
+            </ul>   
+         </li>
+         
+         <li> Ul 속에 Ul
+            <ul>
+               <li>abc</li>
+               <li>def</li>
+            </ul>
+         </li>   
+      </ul>
+   </div>   
+      
+      <hr>
+      
+      <div>
+      <h3> 번호 있는 리스트</h3>
+      텍스트
+      <ol>
+         <li>아메리카노</li>
+         <li>카푸치노</li>
+         <li>카페라떼</li>
+         <li>에스프레소</li>
+      </ol>
+      </div>
+      
+      <div>
+      <h3> 번호 있는 리스트</h3>
+      이미지
+      <ol>
+         <li><img src = "images/아메리카노.jpg" alt=""></li>
+         <li><img src = "images/카페라떼.jpg" alt=""></li>
+         <li><img src = "images/카푸치노.jpg" alt=""></li>
+         <li><img src = "images/에스프레소.jpg" alt=""></li>
+      </ol>
+      </div>
+      
+      <div>
+      <h3> 번호 있는 리스트</h3>
+      a링크 
+      <ol>
+         <li><a href="커피.html" target="_black">아메리카노</li>
+         <li><a href="커피.html" target="_black">카푸치노</li>
+         <li><a href="커피.html" target="_black">카페라떼</li>
+         <li><a href="커피.html" target="_black">에스프레소</li>
+      </ol>
+      </div>
+      
+      <div>
+      <h3> 번호 있는 리스트</h3>
+      a 링크 이미지 
+      <ol>
+         <li><a href="아메리카노.html"><img src = "images/아메리카노.jpg" alt=""></a></li>
+         <li><a href="카페라떼.html"><img src = "images/카페라떼.jpg"alt=""></a></li>
+         <li><a href="카푸치노.html"><img src = "images/카푸치노.jpg" alt=""></a></li>
+         <li><a href="에스프레소.html"><img src = "images/에스프레소.jpg" alt=""></a></li>
+      </ol>
+      </div>
+      
+      <div>
+      <h3> 번호 있는 리스트</h3>
+      다른 리스트
+      <ol>
+         <li>아메리카노
+            <ol>
+               <li>설탕추가</li>
+               <li>샷추가</li>
+            </ol>
+         </li>
+         
+         <li>카페오레
+            <ol>
+               <li>우유추가</li>
+               <li>샷추가</li>
+            </ol>
+         </li>
+         <li></li>
+         <li></li>
+      </ol>
+      </div>
+      
+      <hr> <!-- 자동으로 줄이 바뀐다-->
+      
+      <div>   
+      <h3> 정의 리스트 </h3>
+      <d1>
+         <dt>아메리카노 </dt>
+         <dd>에스프레소에 <sup>물</sup>을 <sub>추가</sub>한 것입니다.</dd>
+         
+         <dt>카페오레</dt>
+         <dd>에스프레소에 <sup>우유</sup>를 넣은 커피입니다.</dd>
+         
+         <dt>카푸치노</dt>
+         <dd>커피 위에 <sup>우유</sup>거품을 얹은 커피입니다.</dd>
+      </d1>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+	function proc1(){
+		
+		
+		today = new Date();
+		birthday = new Date(1996,12-1,24);
+		
+		times = today.getTime() - birthday.getTime();
+		
+		res = "생일 : " + birthday.toLocaleDateString() + "<br>";
+		res += "살아온 millisec : " + times + "<br>";
+		res += "살아온 초 : " + times/1000 + "<br>";
+		res += "살아온 분 : " + times/1000/60 + "<br>";
+		res += "살아온 시간 : " + times/1000/60/60 + "<br>";
+		res += "살아온 일수 : " + times/1000/60/60/24 + "<br>";
+		res += "살아온 년수 : " + times/1000/60/60/24/365 + "<br>";
+		
+		document.querySelector("#result1").innerHTML = res;
+		
+	}
+	
+	function proc2(){
+		
+		// 오늘 날짜 생성
+		today = new Date();
+		
+		// 오늘의 millisec + 100일의 millisec
+		millisec = today.getTime() + 100 * 24 * 60 * 60 * 1000;
+		
+		// 새로운 Date객체 생성
+		nday = new Date(millisec);
+		
+		res = "100일 후 : " + nday.toLocaleDateString();
+		
+		document.querySelector("#result2").innerHTML = res;
+	}
+	
+	function proc3(){
+		
+		xmas = new Date(2020,12-1,25);
+		
+		today = new Date();
+		
+		times = xmas.getTime() - today.getTime();
+		
+		res = "크리스마스까지는 " + times/1000/60/60/24 + "일 남았습니다."
+		
+		document.querySelector("#result3").innerHTML = res;
+		
+		
+	}
+	
+</script>
+</head>
+<body>
+<div class="box">
+<h3>1. 경과시간</h3>
+-태어난 날 / 이성친구 만난날로부터 현재까지 날 수 구하기 <br>
+birthday = new Date("태어난 날")<br>
+today = new Date() : 현재 오늘 날짜<br>
+<br>
+<input type="button" value="확인" onclick="proc1()">
+<br><br>
+<div id="result1"></div>
+</div> 
+
+<div class="box">
+<h3>2. 경과시간</h3>
+- 오늘부터 1일일때 100일 후 구하기 <br>
+- today = new Date() <br>
+- 100일의 millisec 값 구하기 <br>
+= today.getTime() + 100일의 millisec <br>
+<br>
+<input type="button" value="확인" onclick="proc2()">
+<br><br>
+<div id="result2"></div>
+</div> 
+
+<div class="box">
+<h3>3. 경과시간</h3>
+- 크리스마스까지 남은 날 수 구하기 <br>
+- today = new Date() <br>
+- 크리스마스에서 오늘 뺴주기 <br>
+= today.getTime() + 100일의 millisec <br>
+<br>
+<input type="button" value="확인" onclick="proc3()">
+<br><br>
+<div id="result3"></div>
+</div> 
+
+</body>
+</html>

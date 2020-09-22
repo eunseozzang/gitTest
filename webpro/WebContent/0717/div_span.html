@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+   #tip{
+   background : #FAECC5;
+   box-sizing : border-box;
+   word-wrap : break-wrod;
+   /* 글자가 공백없이 길어졌을경우 밖으로 빠져나가는 것을 방지하고 글자를 잘라서 내부로 들어오게 할 경우*/
+   width : calc(95% - 3px );
+   
+   }
+
+
+   div#out{
+      height : 500px;
+      border : 2px solid #FF5E00;
+      margin : 10px  ;
+      padding : 20px ;
+   }
+   
+   h2{
+      border : 1px solid #FFE08C;
+      padding : 10px;
+      text-align: center;
+   }
+   
+   .in{
+      height : 300px;
+      float : left;   
+      border : 1px dotted #F29661;
+      margin : 10px;
+      padding : 10px;
+      box-sizing : border-box;
+   }
+   
+   #dimg{
+      width : calc(30% - 1% );
+      
+   }
+   
+   #cont{
+      width : calc(60% - 1% );
+      overflow : auto;
+   }
+   
+   img{
+      width : 70%;
+      height : 90%;
+   }
+   
+   span{
+   	background : #FFD8D8;
+   	color : #8C8C8C;
+   	display : inline-block;
+   	/* width : 100px; */
+   	height : 30px;
+   	font-size : 1.2em;
+   	font-weight : bold;
+   }
+   
+   .sp{
+   color:red;
+   }
+</style>
+
+</head>
+<body>
+<div id = "tip">
+작성팁<br>
+태그에 class 속성과 id속성을 부여할 수 있다<br>
+<strong>class</strong> 속성 : 여러개의 요소를 같은형식의 스타일을 주고자 할때, css에서 <span>.class이름</span> 으로 지정한다.<br>
+<strong>id 속성</strong> : 여러개의 요소 중 특정요소로 지정하고자 할 때, 특별한 스타일을 지정하고자 할 때 css에서 <span>#id이름</span>으로 사용.
+<br>
+<span class = "sp">box-sizing</span> : 브라우저의 크기를 조절할때 내용도 같이 조절되어야 한다.<br>
+<span class = "sp">width</span> : calc(30% - 1% ) : 가로길이를 30%로 하고 줄일때마다 1%씩 재계싼되어 조절된다.
+
+</div>
+<div id ="out">
+
+   <h2>호시</h2>
+   <div class = "in" id = "dimg">
+      <img src="../images/귀여워.JPG" alt="호시">
+   </div>
+   <div class = "in" id = "cont">
+	    <strong>대한민국의 13인조 보이그룹 세븐틴의 멤버.</strong> 세븐틴의 안무를 창작하는 안무 수장이자 퍼포먼스팀의 리더를 겸하고 있다.
+
+태권도 선수로 활동하던 초등학교 시절, 스카웃 제의가 들어왔을 정도로 기대받던 인재였으나 단지 머리를 짧게 깎기 싫다는 이유로 운동을 그만두고 중학교에 입학한다. <span>당시 한창 샤이니의 음악을 들으며 가수의 꿈을 키우기 시작한 호시</span>는 오디션 이력서의 경력 칸을 채우고자 직접 댄스 동아리[20]를 만드는 대담한 행동을 해버린다. 그렇게 열정만 가진 채 시작한 춤으로 남양주시 댄스 대회 1등을 거머쥐며 재능이 점차 두각을 드러나고 있던 어느 날. 한 도대회에 출전한 호시를 눈여겨 본 관계자가 캐스팅의 의미로 아이스크림을 사주었고, 호시는 이것을 건네받아 2011년 9월 플레디스엔터테인먼트에 입사하게 된다.
+
+<span>활동명 호시는 춤을 출 때의 눈빛이 마치 호랑이와 같다하여 "호랑이의 시선"이라는 의미를 담아 만든 이름이다.</span> "별(星)"을 뜻하는 일본어와도 발음이 똑같은데, 본인은 이 사실을 데뷔 후에 알게 된 듯 하나 소속사 선배들의 사례를 보았을 때 일본어를 미리 염두에 둔 작명임은 확실해 보인다.
+
+파워, 박자, 테크닉 어느 하나 모자람 없이 두루 갖춘 풀 스탯 댄서. 태권도를 배웠던 운동인 출신으로 몸이 유연하고 탄력적이며 강약 조절에 능하다. 특히 긴 팔과 다리로 동작을 매우 날렵하고 민첩하게 소화하는 것이 가장 큰 특징이다. 
+   </div>
+
+
+</div>
+</body>
+</html>
+
+
+
+

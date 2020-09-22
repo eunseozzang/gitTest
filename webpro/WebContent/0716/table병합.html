@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table{
+		border : 2px solid purple;
+	}
+	td{
+		width : 150px;
+		height : 70px;
+	}
+	
+	
+	
+	
+	
+	#tab2{
+		border : 2px solid blue;
+		margin : 20px;
+		border-collapse : collapse;
+		text-align : center;
+	}
+	
+	#tab2 td{
+		width : 100px;
+	}
+	
+	#tab2 #td1{
+		width : 500px;
+	}
+	
+	#tab2 .info{
+		text-align : left;
+	}
+	
+	#tb10{
+		border : 3px solid red;
+	}
+	
+	
+</style>
+</head>
+<body>
+	<table border="1">
+    <tr>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td rowspan="2" colspan="2"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<table border="1" id="tb10">
+
+	<tr>
+		<td>지원자</td>
+		<td rowspan="5">사진</td>
+	</tr>
+	
+	<tr>
+		<td>이메일</td>
+	</tr>
+	<tr>
+		<td>생년월일</td>
+	</tr>
+	
+	<tr>
+		<td>전화번호</td>
+	</tr>
+	
+	<tr>
+		<td>주소</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">자기소개</td>
+	</tr>
+	<tr>
+		<td colspan="2">지원동기</td>
+	</tr>
+	<tr>
+		<td colspan="2">계획</td>
+	</tr>
+</table>
+
+	<table id = "tab2" border="1">
+	<tr>
+		<td colspan="5">평생교육원 강좌소개</td>
+	</tr>
+	
+	<tr>
+		<td>강좌이름</td>
+		<td>강의자</td>
+		<td>소개</td>
+		<td>강좌코드</td>
+		<td>실습비</td>
+	</tr>
+	
+	<tr>
+		<td>덧생과 유화</td>
+		<td>김철수</td>
+		<td id = "td1" class="info">ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</td>
+		<td>H27</td>
+		<td>100000</td>
+	</tr>
+
+	<tr>
+		<td>바이올린</td>
+		<td>홍길동</td>
+		<td class="info">ㅇㅇㅇㅇㅇㅇㅇㅇ</td>
+		<td>H28</td>
+		<td>200000</td>
+	</tr>
+	
+	<tr>
+		<td>성악아카데미</td>
+		<td>김호성</td>
+		<td class="info">ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</td>
+		<td>H30</td>
+		<td>300000</td>
+	</tr>
+	</table>
+</body>
+</html>

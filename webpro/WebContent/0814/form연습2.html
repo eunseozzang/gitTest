@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+	function proc1(){
+		
+		//name을 이용해서 접근
+		vname = document.ff.name.value;
+		vgender = document.ff.gender.value;
+		
+		vhobby = document.ff.hobby;
+		
+// 		text영역에는 역슬래쉬n 써야한다
+		
+		res = "이름 : " + vname + "\n";
+		res += "성별 : " + vgender + "\n";
+		res += "취미 : " 
+		for(i=0;i<vhobby.length;i++){
+// 			if(vhobby[i]:checked);
+			if(vhobby[i].checked){
+				res += vhobby[i].value + " ";
+			}
+		}
+		
+		document.ff.area.value = res;
+		
+	}
+</script>
+</head>
+<body>
+<div class = "box">
+	<form name="ff">
+		이 름 : <input type="text" name="name"><br>
+		성 별 : <input type="radio" value="남자" name="gender" checked>남
+		<input type="radio" value="여자" name="gender">여<br>
+		취 미 : <input type="checkbox" name="hobby" value="여행" checked="checked">여행
+		<input type="checkbox" name="hobby" value="독서">독서
+		<input type="checkbox" name="hobby" value="영화감상">영화감상
+		<input type="checkbox" name="hobby" value="바둑">바둑
+		<input type="checkbox" name="hobby" value="장기">장기
+		<input type="checkbox" name="hobby" value="등산">등산
+		<input type="checkbox" name="hobby" value="낚시">낚시<br><br>
+		
+		<input type="button" value="결과출력" onclick="proc1()">
+	<br><br>
+	<textarea name="area" cols="60" rows="10"></textarea>
+	</form>
+</div> 
+</body>
+</html>

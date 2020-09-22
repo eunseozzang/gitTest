@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+	form{
+		height : 400px;
+		margin-left : 100px;
+	}
+	
+	#aa{
+		width : 50px;
+		height : 30px;
+	}
+</style>
+<script>
+function proc1(){
+		
+		dan = document.ff.input.value;
+		
+		res = dan + "단" + "\n\n";
+		
+		for(i=1;i<10;i++){
+			res += dan + " * " + i + " = " + dan*i + "\n";
+		}
+		document.ff.area.value = res;
+	}
+</script>
+</head>
+<body>
+<div class = "box">
+	<form name="ff">
+		<input type="text" name="input" id="aa"> 단
+		<input type="button" value="출력" onclick="proc1()">
+	<br><br>
+	<textarea name="area" cols="25" rows="15"></textarea>
+	</form>
+</div> 
+
+</body>
+</html>
